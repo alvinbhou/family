@@ -62,19 +62,20 @@
             margin: 20px 0 0;
         }
 
-        .hero {
-            width: auto;
-            height: clamp(120px, 26vh, 260px);
-            height: clamp(120px, 26dvh, 260px);
-            transform: rotate(-3deg);
-            margin-top: 0;
+        .photo {
+            background: #fff;
+            padding: 8px 8px 14px;
+            box-shadow: 0 6px 20px rgba(60, 60, 30, 0.18);
+            margin-top: 6px;
         }
 
-        h1 {
-            font-weight: 600;
-            font-size: 2rem;
-            letter-spacing: 0.35em;
-            margin: clamp(8px, 1.6dvh, 20px) 0 clamp(8px, 1.6dvh, 20px) 0.35em; /* offset trailing letter-spacing */
+        .photo img {
+            display: block;
+            height: clamp(200px, 38vh, 400px);
+            height: clamp(200px, 38dvh, 400px);
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: 50% 70%;
         }
 
         .squiggle { width: 180px; margin: 8px 0; }
@@ -83,7 +84,7 @@
             font-size: 0.85rem;
             line-height: 1.7;
             letter-spacing: 0.12em;
-            margin: 0;
+            margin: clamp(12px, 2.4dvh, 28px) 0 0;
         }
 
         .couple {
@@ -92,15 +93,12 @@
             justify-content: center;
             gap: 18px;
             margin: clamp(12px, 2.4dvh, 28px) 0 2px;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 1.9rem;
             letter-spacing: 0.2em;
         }
 
         .couple .amp {
-            font-family: 'Caveat Brush', cursive;
-            font-weight: 400;
-            font-size: 2.6rem;
             letter-spacing: 0;
             opacity: 0.7;
         }
@@ -142,8 +140,11 @@
             font-size: 0.95rem;
             line-height: 1.8;
             letter-spacing: 0.12em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8em;
         }
-        .hosts .label { display: block; margin-bottom: 4px; }
 
         .closing {
             font-family: 'Caveat Brush', cursive;
@@ -154,28 +155,25 @@
 
         @media (max-width: 480px) {
             body { padding-top: 12px; }
-            h1 { font-size: 1.4rem; letter-spacing: 0.2em; margin-left: 0.2em; }
             .couple { font-size: 1.5rem; gap: 12px; }
-            .couple .amp { font-size: 2.2rem; }
             .message { font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
     <main class="invite">
-        <img class="hero" src="cake.png" alt="蛋糕">
-        <h1>婚禮家宴誠摯邀請</h1>
+        <div class="photo"><img src="city-hall-web.jpg" alt="舊金山市政廳"></div>
 
 
         <p class="message">
-            我們要結婚了！<br>
-            誠摯邀請您一同見證我們的幸福時刻，<br>
+            我們結婚了！<br>
+            誠摯邀請您一同慶祝我們的幸福時刻，<br>
             分享喜悅、共度溫馨的家宴時光。<br>
             期待與您相聚，留下美好回憶！
         </p>
 
         <div class="couple">
-            <span>侯舜元</span><span class="amp">&amp;</span><span>石羽君</span>
+            <span>侯舜元</span><span class="amp">&amp;</span><span>石羽君</span><span>家宴</span>
         </div>
 
         <section class="details">
@@ -197,9 +195,8 @@
         </section>
 
         <div class="hosts">
-            <span class="label"><span class="ico">💌</span>邀請人</span>
-            侯育致 · 賴貞儀 敬邀<br>
-            石玉琳 · 林淑齡 敬邀
+            <span class="names">侯育致 · 賴貞儀<br>石玉琳 · 林淑齡</span>
+            <span>敬邀</span>
         </div>
 
     </main>
